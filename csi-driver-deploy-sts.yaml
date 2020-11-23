@@ -40,7 +40,7 @@ spec:
             - mountPath: /csi
               name: socket-dir
         - name: vsphere-csi-controller
-          image: gcr.io/cloud-provider-vsphere/csi/release/driver:v1.0.1
+          image: gcr.io/cloud-provider-vsphere/csi/release/driver:v1.0.2
           securityContext:
             privileged: true
           lifecycle:
@@ -86,7 +86,7 @@ spec:
             - mountPath: /var/lib/csi/sockets/pluginproxy/
               name: socket-dir
         - name: vsphere-syncer
-          image: gcr.io/cloud-provider-vsphere/csi/release/syncer:v1.0.1
+          image: gcr.io/cloud-provider-vsphere/csi/release/syncer:v1.0.2
           args:
             - "--v=2"
           imagePullPolicy: "Always"
